@@ -1,6 +1,11 @@
 import { useState } from "react";
+import { useDispatch } from "react-redux";
+import { useHistory } from "react-router-dom";
+import * as authActions from "../store/actions/auth";
 
 const Login = () => {
+    const dispatch = useDispatch();
+    const history = useHistory();
     const [error, setError] = useState(null);
 
     const [email, setEmail] = useState('');
@@ -31,8 +36,10 @@ const Login = () => {
             return;
         }
 
-        // Navigate to home page with username and password
-        window.location.href = '/home';
+        // login
+        dispatch(authActions.login(email, password, () => {
+            history.push('/home');
+        }))
     }
 
 
