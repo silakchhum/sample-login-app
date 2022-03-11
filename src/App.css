@@ -1,38 +1,76 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+#root {
+  height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  background-image: url(../public/background.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  
+}
+
+.form-login {
+  width: 550px;
+  margin: auto;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.header {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  font-size: 25px;
   color: white;
+  text-align: center;
+  padding: 20px;
+  background: linear-gradient(180deg, #4990e9, #1b74e4);
 }
 
-.App-link {
-  color: #61dafb;
+.body {
+  background-color: #F2F1F7;
+  backdrop-filter: blur(16px) saturate(180%);
+  padding: 40px;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  font-size: 17px;
+  padding-bottom: 5px;
+}
+
+.form-group input {
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  width: 95%;
+  font-size: 16px;
+  outline: none;
+  margin-top: 5px;
+}
+
+button[name="submit"] {
+  margin-top: 20px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  width: 100%;
+  font-size: 16px;
+  outline: none;
+  background-color: #4990e9;
+  color: white;
+  cursor: pointer;
+}
+
+.error {
+  background-color: #f8d7da;
+  padding: 10px;
+  margin-bottom: 10px;
+  color: red;
+  border-radius: 5px;
+  font-size: 15px;
 }
